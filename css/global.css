@@ -1,3 +1,21 @@
+*
+{
+    margin: 0;
+}
+
+header
+{
+    background-color: #202020;
+    height: 7.5vw;
+    width: 100%;
+}
+#header-triangle-icon
+{
+    border-bottom: 10vw solid;
+    border-left: 40vw solid;
+    border-color: transparent transparent transparent purple;
+}
+
 p
 {
     color: green;
