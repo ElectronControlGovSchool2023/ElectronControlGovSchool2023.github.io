@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root
 {
-    --header-flair-color: #3A89FF;
+    --header-flair-color: #3a89ff;
     --header-block-color: #303030;
-    --header-text-color: #FFF;
+    --header-text-color: #fff;
+
+    --info-bubble-color-1: #e7c45a;
+    --info-bubble-color-2: #72e75a;
+    --info-bubble-color-3: #ba5ae7;
+    --info-bubble-color-4: #5a76e7;
 }
 
 *
@@ -27,6 +32,7 @@ header
     height: 3.75vw;
     width: 100%;
     position: fixed;
+    z-index: 1000;
 
     transition: all 0.25s;
 }
@@ -50,6 +56,90 @@ header .header-item
 header #first-item
 {
     padding-left: 7.5vw;
+}
+
+.about-container
+{
+    display: flex;
+}
+
+.about-object
+{
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 3vw;
+    width: 20vw;
+    text-align: center;
+}
+.about-object #title
+{
+    margin-bottom: 3.75vw;
+    margin-top: 2vw;
+}
+.about-object:nth-child(4n + 0)
+{
+    background-color: var(--info-bubble-color-1);
+
+    translate: -20vw 20vw;
+}
+.about-object:nth-child(4n + 1)
+{
+    background-color: var(--info-bubble-color-2);
+
+    translate: 15vw 35vw;
+}
+.about-object:nth-child(4n + 2)
+{
+    background-color: var(--info-bubble-color-3);
+
+    translate: 25vw 50vw;
+}
+.about-object:nth-child(4n + 3)
+{
+    background-color: var(--info-bubble-color-4);
+
+    translate: -25vw 5vw;
+}
+
+.title
+{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.title #left
+{
+    padding: 10%;
+    width: 30%;
+}
+.title #right
+{
+    padding: 5%;
+    width: 60%;
+}
+.title * h1
+{
+    color: #303030;
+    font-family: "Outfit";
+    font-size: 3.5vw;
+}
+.title * .additional
+{
+    color: #A0A0A0;
+    font-size: 1.375vw;
+
+    transition: color 0.2s;
+}
+.title * .additional:hover
+{
+    color: #606060;
+}
+
+.title-image
+{
+    width: auto;
 }
 
 #header-buffer

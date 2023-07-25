@@ -56,3 +56,8 @@ function maximizeHeader()
 
     headerMaximized = true;
 }
+
+function animateInIntro()
+{
+    
+}
