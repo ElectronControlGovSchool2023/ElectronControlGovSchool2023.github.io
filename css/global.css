@@ -33,7 +33,7 @@ header
     height: 3.75vw;
     width: 100%;
     position: fixed;
-    z-index: 1e4;
+    z-index: 10000;
 
     transition: all 0.25s;
 }
@@ -156,7 +156,7 @@ header #first-item
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 1e6;
+    z-index: 1000;
 
     transition: all 0.5s;
 }

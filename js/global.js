@@ -65,7 +65,7 @@ transitioner.style.backgroundColor = "rgba(255, 255, 255, 0)";
 window.addEventListener("popstate", function (event)
 {
     if (event.state == undefined || event.state == null) return;
-    urlTransition(history.state, false);
+    urlTransition(event.state, false);
 });
 
 function urlTransition(url, push = true)
