@@ -57,7 +57,56 @@ function maximizeHeader()
     headerMaximized = true;
 }
 
-function animateInIntro()
+// Smooth URL Code
+var transitioner = document.getElementById("url-transitioner");
+transitioner.hidden = true;
+transitioner.style.backgroundColor = "rgba(255, 255, 255, 0)";
+
+window.addEventListener("popstate", function (event)
 {
-    
+    if (event.state == undefined || event.state == null) return;
+    urlTransition(history.state, false);
+});
+
+function urlTransition(url, push = true)
+{
+    transitioner.hidden = false;
+
+    setTimeout(function ()
+    {
+        transitioner.style.backgroundColor = "rgba(255, 255, 255, 1)";
+        setTimeout(function ()
+        {
+            const http = new XMLHttpRequest();
+            http.onreadystatechange = function ()
+            {
+                if (http.readyState != http.DONE) return;
+                if (http.status != 200)
+                {
+                    console.error(`Error code ${http.status} trying to load ${url}: ${http.statusText}`);
+                    return;
+                }
+
+                if (push) history.pushState(document.URL, "", url);
+                document.documentElement.innerHTML = http.response;
+
+                transitioner = document.getElementById("url-transitioner");
+                transitioner.hidden = false;
+                transitioner.style.backgroundColor = "rgba(255, 255, 255, 1)";
+                transitioner.style.transition = "all 0.5s";
+
+                setTimeout(function ()
+                {
+                    transitioner.style.backgroundColor = "rgba(255, 255, 255, 0)";
+                    setTimeout(function ()
+                    {
+                        transitioner.hidden = true;
+                    }, 500);
+                }, 10);
+            };
+
+            http.open("GET", url);
+            http.send();
+        }, 500);
+    }, 10);
 }
