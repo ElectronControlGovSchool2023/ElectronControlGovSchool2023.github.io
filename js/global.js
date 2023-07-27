@@ -110,3 +110,9 @@ function urlTransition(url, push = true)
         }, 500);
     }, 10);
 }
+
+// Title Animate In
+function animateInTitle()
+{
+    
+}

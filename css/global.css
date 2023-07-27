@@ -6,10 +6,10 @@
     --header-block-color: #303030;
     --header-text-color: #fff;
 
-    --info-bubble-color-1: #e7c45a;
-    --info-bubble-color-2: #72e75a;
-    --info-bubble-color-3: #ba5ae7;
-    --info-bubble-color-4: #5a76e7;
+    --info-bubble-color-1: #7dacf3;
+    --info-bubble-color-2: #8eb4ed;
+    --info-bubble-color-3: #3368b8;
+    --info-bubble-color-4: #678cc4;
 }
 
 *
@@ -61,7 +61,7 @@ header #first-item
 
 .about-container
 {
-    display: flex;
+    
 }
 
 .about-object
@@ -82,43 +82,48 @@ header #first-item
 {
     background-color: var(--info-bubble-color-1);
 
-    translate: -20vw 20vw;
+    translate: 20vw -5vw;
 }
 .about-object:nth-child(4n + 1)
 {
     background-color: var(--info-bubble-color-2);
 
-    translate: 15vw 35vw;
+    translate: 55vw 10vw;
 }
 .about-object:nth-child(4n + 2)
 {
     background-color: var(--info-bubble-color-3);
 
-    translate: 25vw 50vw;
+    translate: 65vw 25vw;
 }
 .about-object:nth-child(4n + 3)
 {
     background-color: var(--info-bubble-color-4);
 
-    translate: -25vw 5vw;
+    translate: 15vw -20vw;
 }
 
 .title
 {
     align-items: center;
     display: flex;
+    height: max-content;
     width: 100%;
     text-align: center;
 }
 .title #left
 {
-    padding: 10%;
-    width: 30%;
+    padding: 5% 5% 5% 10%;
+    width: 40%;
 }
 .title #right
 {
-    padding: 5%;
-    width: 60%;
+    padding: 15% 10% 5% 5%;
+    width: 40%;
+}
+.title * img
+{
+    width: 100%;
 }
 .title * h1
 {
