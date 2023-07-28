@@ -1,13 +1,24 @@
-p
+footer
 {
-    margin-top: 2.5vw;
+    margin-top: 5vw;
 }
 
 .title
 {
+    margin: 2.5vw 25vw;
+    text-align: center;
+}
+
+.week
+{
     margin: 2.5vw 20vw;
 }
-.title h1
+.week h2
 {
-    text-align: center;
+    translate: -5vw 0vw;
+}
+
+.title p, .week p
+{
+    margin-top: 2.5vw;
 }
