@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Electron Control Student Interviews</title>
+
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    </head>
+
+    <script src="js/global.js" defer></script>
+
+    <body>
+        <header>
+            <a onclick="urlTransition('index.html')"><img class="header-image" src="media/icon.png"></a>
+            <a class="header-item" onclick="urlTransition('index.html')" id="first-item">Home</a>
+            <a class="header-item" onclick="urlTransition('cirriculum.html')">Curriculum</a>
+            <a class="header-item">Student Interviews</a>
+            <a class="header-item" onclick="urlTransition('photos.html')">Gallery</a>
+        </header>
+
+        <div id="header-buffer"></div>
+
+        <main>
+            <p>this (will be) the interviews</p>
+        </main>
+
+        <footer>
+            <p>Made with love and procrastination by the Electron Control webmaster team.</p>
+            <p><b>No website builders, frameworks, or other external libraries used.</b></p>
+            <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </footer>
+
+        <div id="url-transitioner" hidden></div>
+    </body>
+</html>

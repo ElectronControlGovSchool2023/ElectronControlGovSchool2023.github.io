@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Electron Control Photo Gallery</title>
+
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/photos.css">
+    </head>
+
+    <script src="js/global.js" defer></script>
+    <script src="js/photos.js" defer></script>
+
+    <body>
+        <header>
+            <a onclick="urlTransition('index.html')"><img class="header-image" src="media/icon.png"></a>
+            <a class="header-item" onclick="urlTransition('index.html')" id="first-item">Home</a>
+            <a class="header-item" onclick="urlTransition('cirriculum.html')">Curriculum</a>
+            <a class="header-item" onclick="urlTransition('interviews.html')">Student Interviews</a>
+            <a class="header-item">Gallery</a>
+        </header>
+
+        <div id="header-buffer"></div>
+
+        <main>
+            <div class="title">
+                <h1>Photo Gallery</h1>
+            </div>
+
+            <div class="table-of-contents" id="table-of-contents">
+                <h3>Table of Contents</h3>
+                <!-- Will be filled by `/js/photos.js` -->
+            </div>
+            <div class="photos" id="gallery-container"></div> <!-- Will be filled by `/js/photos.js` -->
+        </main>
+
+        <footer>
+            <p>Made with love and procrastination by the Electron Control webmaster team.</p>
+            <p><b>No website builders, frameworks, or other external libraries used.</b></p>
+            <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </footer>
+
+        <div id="url-transitioner" hidden></div>
+    </body>
+</html>

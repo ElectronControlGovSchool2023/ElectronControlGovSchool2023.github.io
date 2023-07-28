@@ -9,10 +9,11 @@
     </head>
 
     <script src="js/global.js" defer></script>
+    <script src="js/index.js" defer></script>
 
     <body>
         <header>
-            <a><img class="header-image" src="media/icon.png"></a>
+            <a onclick="urlTransition('index.html')"><img class="header-image" src="media/icon.png"></a>
             <a class="header-item" id="first-item">Home</a>
             <a class="header-item" onclick="urlTransition('cirriculum.html')">Curriculum</a>
             <a class="header-item" onclick="urlTransition('interviews.html')">Student Interviews</a>
@@ -24,7 +25,7 @@
         <main>
             <div class="title">
                 <div id="left">
-                    <img id="title-image"> <!-- Will be filled in by `/js/global.js`. -->
+                    <img id="title-image"> <!-- Will be filled in by `/js/index.js`. -->
                 </div>
                 <div id="right">
                     <h1>Electron Control</h1>
