@@ -59,6 +59,7 @@
 .more-items .item
 {
     border-radius: 0.75vw;
+    color: black;
     cursor: pointer;
     margin: 0vw 3vw;
     padding: 2vw;
@@ -81,6 +82,10 @@
     border: 0.15vw solid var(--info-bubble-color-3);
 
     transition: all 0.2s;
+}
+.more-items .item:hover
+{
+    color: white;
 }
 .more-items .item:nth-child(3n + 0):hover
 {
