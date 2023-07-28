@@ -1,4 +1,4 @@
-// Header code
+//#region Header code
 var headerObject = document.getElementsByTagName("header")[0];
 var headerImages = headerObject.getElementsByClassName("header-image");
 
@@ -31,7 +31,7 @@ function minimizeHeader()
         var image = headerImages[i];
         image.style.borderRadius = "0.3vw";
         image.style.height = "3vw";
-        image.style.marginLeft = "10vw";
+        image.style.marginLeft = "9.75vw";
         image.style.padding = "0.25vw";
         image.style.width = "3vw";
     }
@@ -56,8 +56,9 @@ function maximizeHeader()
 
     headerMaximized = true;
 }
+//#endregion
 
-// Smooth URL Code
+//#region Smooth URL Code
 var transitioner = document.getElementById("url-transitioner");
 transitioner.hidden = true;
 transitioner.style.backgroundColor = "rgba(255, 255, 255, 0)";
@@ -119,8 +120,9 @@ function urlTransition(url, push = true)
     }, 10);
     */
 }
+//#endregion
 
-// Randomized thumb code
+//#region Randomized thumb code
 const thumbDirectory = "/media/thumbs";
 var thumb = document.getElementById("title-image");
 var thumbHttp = new XMLHttpRequest();
@@ -140,8 +142,6 @@ thumbHttp.onreadystatechange = function ()
 
         var index = Math.floor(Math.random() * options.length);
         thumb.src = thumbDirectory + "/" + options[index];
-
-        console.log("chosen: " + options[index] + ` (index ${index})`);
     }
     catch (error)
     {
@@ -152,3 +152,13 @@ thumbHttp.onreadystatechange = function ()
 
 thumbHttp.open("GET", thumbDirectory + "/thumb_data.json");
 thumbHttp.send();
+//#endregion
+
+//#region Reset Scroll
+function scrollToTop()
+{
+    // A lot easier than I thought it would be.
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+//#endregion

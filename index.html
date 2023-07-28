@@ -5,6 +5,7 @@
         <title>Electron Control at 2023 SRGS</title>
 
         <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
 
     <script src="js/global.js" defer></script>
@@ -27,8 +28,8 @@
                 </div>
                 <div id="right">
                     <h1>Electron Control</h1>
-                    <h3 class="additional">Governor's School at the University of Lynchburg</h3>
-                    <h3 class="additional">Summer 2023</h3>
+                    <a href="https://www.lynchburg.edu/academics/governors-school/" target="_blank"><h3 class="additional">Governor's School at the University of Lynchburg</h3></a>
+                    <a href="https://www.google.com/search?q=what+season+is+july+in" target="_blank"><h3 class="additional">Summer 2023</h3></a>
                 </div>
             </div>
 
@@ -50,7 +51,57 @@
                     <p>Testing Response</p>
                 </div>
             </div>
+
+            <div class="spacer"></div>
+
+            <div class="quote-container">
+                <h3 class="big-h3" id="intro">Here's what the students think:</h3>
+
+                <div class="quote">
+                    <p>THIS IS A TEST QUOTE!!! I LOVE TEST QUOTES!!!</p>
+                    <h6 id="person">Guy</h6>
+                </div>
+                <div class="quote">
+                    <p>THIS IS A TEST QUOTE!!! I LOVE TEST QUOTES!!!</p>
+                    <h6 id="person">Guy</h6>
+                </div>
+                <div class="quote">
+                    <p>THIS IS A TEST QUOTE!!! I LOVE TEST QUOTES!!!</p>
+                    <h6 id="person">Guy</h6>
+                </div>
+                <div class="quote">
+                    <p>THIS IS A TEST QUOTE!!! I LOVE TEST QUOTES!!!</p>
+                    <h6 id="person">Guy</h6>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="more">
+                <h3 class="big-h3" id="intro">Some more stuff to look at:</h3>
+
+                <div class="more-items">
+                    <div class="item" onclick="urlTransition('cirriculum.html')">
+                        <h5>Class Cirriculum</h5>
+                        <p>Check out exactly how this class is taught!</p>
+                    </div>
+                    <div class="item" onclick="urlTransition('interviews.html')">
+                        <h5>Student Interviews</h5>
+                        <p>More on what the students think of this class!</p>
+                    </div>
+                    <div class="item" onclick="urlTransition('photos.html')">
+                        <h5>Photo Gallery</h5>
+                        <p>Get a closer look at what it's like here!</p>
+                    </div>
+                </div>
+            </div>
         </main>
+
+        <footer>
+            <p>Made with love and procrastination by the Electron Control webmaster team.</p>
+            <p><b>No website builders, frameworks, or other external libraries used.</b></p>
+            <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </footer>
 
         <div id="url-transitioner" hidden></div>
     </body>

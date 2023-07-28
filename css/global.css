@@ -5,25 +5,47 @@
     --header-flair-color: #3a89ff;
     --header-block-color: #303030;
     --header-text-color: #fff;
+    --spacer-color: #d0d0d0;
 
-    --info-bubble-color-1: #7dacf3;
-    --info-bubble-color-2: #8eb4ed;
-    --info-bubble-color-3: #3368b8;
-    --info-bubble-color-4: #678cc4;
+    --footer-color: #3a89ff;
+    --footer-button-color: rgba(255, 255, 255, 0.25);
 }
 
 *
 {
-    font-family: "Nunito";
-    font-size: 1.25vw;
     margin: 0;
 }
 
 a
 {
-    cursor: pointer;
     font-weight: bold;
     text-decoration: none;
+}
+a, button
+{
+    cursor: pointer;
+}
+
+body
+{
+    font-family: "Nunito";
+    font-size: 1.25vw;
+}
+
+footer
+{
+    align-items: center;
+    background-color: var(--footer-color);
+    color: white;
+    display: flex;
+    font-family: "Outfit";
+    font-size: 1vw;
+    padding: 0.75vw;
+    vertical-align: center;
+}
+footer *
+{
+    margin: auto;
 }
 
 header
@@ -59,79 +81,23 @@ header #first-item
     padding-left: 7.5vw;
 }
 
-.about-object
+html
 {
-    align-items: center;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    padding: 3vw;
-    width: 20vw;
-    text-align: center;
-}
-.about-object #title
-{
-    margin-bottom: 3.75vw;
-    margin-top: 2vw;
-}
-.about-object:nth-child(4n + 0)
-{
-    background-color: var(--info-bubble-color-1);
-
-    translate: 15vw -5vw;
-}
-.about-object:nth-child(4n + 1)
-{
-    background-color: var(--info-bubble-color-2);
-
-    translate: 55vw 10vw;
-}
-.about-object:nth-child(4n + 2)
-{
-    background-color: var(--info-bubble-color-3);
-
-    translate: 60vw 25vw;
-}
-.about-object:nth-child(4n + 3)
-{
-    background-color: var(--info-bubble-color-4);
-
-    translate: 20vw -20vw;
+    scroll-behavior: smooth;
 }
 
-.title
+h1, h2, h3, h4, h5, h6
 {
-    align-items: center;
-    display: flex;
-    height: max-content;
-    width: 100%;
-    text-align: center;
-}
-.title #left
-{
-    padding: 5% 5% 5% 10%;
-    width: 40%;
-}
-.title #right
-{
-    padding: 5% 10% 5% 5%;
-    width: 40%;
-}
-.title * h1
-{
-    color: #303030;
     font-family: "Outfit";
-    font-size: 3.5vw;
 }
-.title * .additional
-{
-    color: #A0A0A0;
-    font-size: 1.375vw;
 
-    transition: color 0.2s;
-}
-.title * .additional:hover
+.spacer
 {
-    color: #606060;
+    background-color: var(--spacer-color);
+    border-radius: 0.25vw;
+    height: 0.5vw;
+    margin: 5vw 25%;
+    width: 50%;
 }
 
 #header-buffer
@@ -139,11 +105,15 @@ header #first-item
     padding-top: 10vw;
 }
 
-#title-image
+#back-to-top
 {
-    border: 0.1vw solid #303030;
-    border-radius: 2vw;
-    width: 100%;
+    background-color: var(--footer-button-color);
+    border: 0.125vw solid rgba(255, 255, 255, 0.375);
+    border-radius: 0.25vw;
+    color: white;
+    font-family: "Nunito";
+    font-size: 0.75vw;
+    padding: 0.25vw 0.35vw;
 }
 
 #url-transitioner
