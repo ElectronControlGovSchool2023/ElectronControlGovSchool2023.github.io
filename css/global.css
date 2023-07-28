@@ -9,6 +9,11 @@
 
     --footer-color: #3a89ff;
     --footer-button-color: rgba(255, 255, 255, 0.25);
+
+    --info-bubble-color-1: #7dacf3;
+    --info-bubble-color-2: #8eb4ed;
+    --info-bubble-color-3: #3368b8;
+    --info-bubble-color-4: #678cc4;
 }
 
 *
@@ -42,6 +47,11 @@ footer
     font-size: 1vw;
     padding: 0.75vw;
     vertical-align: center;
+}
+footer a
+{
+    color: white;
+    font-weight: normal;
 }
 footer *
 {

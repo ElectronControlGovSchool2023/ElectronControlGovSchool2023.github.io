@@ -1,0 +1,57 @@
+.interviews
+{
+    margin: 5vw 0vw;
+}
+
+.interview-item
+{
+    color: white;
+    padding: 5vw 20vw;
+}
+.interview-item:nth-child(4n + 1)
+{
+    background-color: var(--info-bubble-color-1);
+}
+.interview-item:nth-child(4n + 2)
+{
+    background-color: var(--info-bubble-color-2);
+}
+.interview-item:nth-child(4n + 3)
+{
+    background-color: var(--info-bubble-color-3);
+}
+.interview-item:nth-child(4n + 4)
+{
+    background-color: var(--info-bubble-color-4);
+}
+.interview-item h3
+{
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+.question #q
+{
+    margin-right: 45%;
+    text-align: left;
+}
+.question #a
+{
+    margin-left: 45%;
+    text-align: right;
+}
+
+.question-spacer
+{
+    background-color: white;
+    border-radius: 0.25vw;
+    height: 0.25vw;
+    margin: 1.5vw 25%;
+    width: 50%;
+}
+
+.title
+{
+    margin: 2.5vw;
+    text-align: center;
+}

@@ -1,11 +1,3 @@
-:root
-{
-    --info-bubble-color-1: #7dacf3;
-    --info-bubble-color-2: #8eb4ed;
-    --info-bubble-color-3: #3368b8;
-    --info-bubble-color-4: #678cc4;
-}
-
 .about-object
 {
     align-items: center;
@@ -18,8 +10,8 @@
 .about-object #title
 {
     font-size: 1.75vw;
-    margin-bottom: 3.75vw;
-    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
 }
 .about-object:nth-child(4n + 1)
 {
